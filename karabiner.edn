@@ -1,0 +1,55 @@
+{
+    :layers {
+        :caps_mode {:key :caps_lock}
+    }
+    :applications {
+        :figma ["com.figma.Desktop"]
+    }
+    :main [
+        {
+            :des "disabled arrow keys"
+            :rules [
+                [:##left_arrow :vk_none]
+                [:##up_arrow :vk_none]
+                [:##right_arrow :vk_none]
+                [:##down_arrow :vk_none]
+            ]
+        }
+        {
+            :des "vim like navigation"
+            :rules [
+                :caps_mode
+                    [:##h :left_arrow]
+                    [:##j :down_arrow]
+                    [:##k :up_arrow]
+                    [:##l :right_arrow]
+                    [:##f :left_command]
+                    [:##d :left_option]
+                    [:##s :left_shift]
+            ]
+        }
+        {
+            :des "figma"
+            :rules [
+                :figma
+                    [:!Cgrave_accent_and_tilde :!C1]
+                    [:!C1 :!C2]
+                    [:!C2 :!C3]
+                    [:!C3 :!C4]
+                    [:!C4 :!C5]
+                    [:!C5 :!C6]
+                    [:!C6 :!C7]
+                    [:!C7 :!C8]
+                    [:!C8 :!C9]
+
+                    :caps_mode
+                        [:q :!Chyphen]
+                        [:w :!Cequal_sign]
+                        [:e :!C0]
+                        [:r :!S2]
+                        [:a :page_up]
+                        [:z :page_down]
+            ]
+        }
+    ]
+}
